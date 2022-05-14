@@ -155,9 +155,13 @@
   fill: transparent;
   transition: fill var(--trans-time);
 }
-.check-box:checked + .license__agreement span {
-  background-color: var(--link-color);
-  border: none;
+.license__agreement {
+  .check-box:checked + & {
+    span {
+      background-color: var(--link-color);
+      border: none;
+    }
+  }
 }
 .check-box:checked + .license__agreement .license__check-icon {
   fill: var(--white-color);
